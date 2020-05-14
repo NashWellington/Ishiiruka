@@ -55,7 +55,7 @@ endmacro()
 macro(check_libav)
 	if(PKG_CONFIG_FOUND)
 		pkg_check_modules(LIBAV libavcodec>=54.35.0 libavformat>=54.20.4
-			libswscale>=2.1.1 libavutil>=52.3.0)
+			libswscale>=2.1.1 libavutil>=55.78.100)
 	else()
 		# Attempt to find it through static means
 		set(LIBAV_LDFLAGS avformat avcodec swscale avutil)

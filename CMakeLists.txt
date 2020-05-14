@@ -35,6 +35,10 @@ option(ENABLE_ANALYTICS "Enables opt-in Analytics collection" ON)
 # unique name here.
 set(DISTRIBUTOR "None" CACHE STRING "Name of the distributor.")
 
+# Why do I have to do this
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_STANDARD_REQUIRED ON)
+
 # Enable SDL for default on operating systems that aren't OSX, Android, Linux or Windows.
 if(NOT APPLE AND NOT ANDROID AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL "Linux" AND NOT MSVC)
 	option(ENABLE_SDL "Enables SDL as a generic controller backend" ON)
